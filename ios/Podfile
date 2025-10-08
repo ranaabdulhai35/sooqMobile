@@ -1,0 +1,67 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+require_relative '../node_modules/react-native-permissions/scripts/setup'
+
+$RNFirebaseAsStaticFramework = true
+platform :ios, '16.0'
+
+prepare_react_native_project!
+
+# Remove this line to avoid conflicts,
+# use_frameworks! :linkage => :static,
+# Configure frameworks selectively for Firebase,
+use_frameworks! :linkage => :static
+
+config = {
+  reactNativePath: "../node_modules/react-native"
+}
+
+use_react_native!(
+  :path => config[:reactNativePath],
+  :hermes_enabled => true, # Enable Hermes if needed
+  :fabric_enabled => false # Enable Fabric if needed
+)
+
+target 'SoogAlbalad' do
+  # Use native modules
+  use_native_modules!
+
+  # Firebase dependencies (check compatibility)
+  pod 'Firebase/Auth', '11.11.0'
+  pod 'Firebase/Messaging', '~> 11.11.0'
+  # pod 'gRPC-C++', '~> 1.50.0' # Downgrade gRPC for compatibility
+  # pod 'gRPC-Core'
+  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+
+  # permissions_path = '../node_modules/react-native-permissions/ios'
+  # pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse"
+  # pod 'Permission-LocationAccuracy', :path => "#{permissions_path}/LocationAccuracy"
+  # pod 'Permission-LocationAlways', :path => "#{permissions_path}/LocationAlways"
+
+  # Other dependencies
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'RNPermissions', :path => '../node_modules/react-native-permissions'
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+  pod 'IQKeyboardManagerSwift', '~> 6.5'
+  pod 'SDWebImage'
+  pod 'KRPullLoader'
+  pod 'IQKeyboardManager' 
+
+  target 'SoogAlbaladTests' do
+ 
+    inherit! :complete
+    permissions_path = '../node_modules/react-native-permissions/ios'
+    pod 'RNPermissions', :path => '../node_modules/react-native-permissions'
+  end
+
+  post_install do |installer|
+    react_native_post_install(installer)
+
+    # Fix for arm64 issue with simulator
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+      end
+    end
+  end
+end

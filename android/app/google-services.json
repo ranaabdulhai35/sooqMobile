@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "448006986524",
+    "project_id": "soogalbalad",
+    "storage_bucket": "soogalbalad.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:448006986524:android:3644c681240fc3976978d9",
+        "android_client_info": {
+          "package_name": "com.app.soogAlbalad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "448006986524-8nn5n9gn1crs6j740ra5u3ai5n9044b7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAovhzbLMJEnV4dD_QIRelDlVb5o5XKa1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "448006986524-8nn5n9gn1crs6j740ra5u3ai5n9044b7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "448006986524-k5vi6stkcr08301qg9mnrh2ie3jhthak.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.AlBalad.Alswailems"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

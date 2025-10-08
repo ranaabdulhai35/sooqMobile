@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>448006986524-s70j0g5885fhoo7lh3c72o9um3bn5icv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.448006986524-s70j0g5885fhoo7lh3c72o9um3bn5icv</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>448006986524-8fkel3tm8ljdcago43rgp6mdjdkm8hu6.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDvFLP5FQulQVq_mzM-TOyIr62ZlEw06D4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>448006986524</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.app.soogAlbalad</string>
+	<key>PROJECT_ID</key>
+	<string>soogalbalad</string>
+	<key>STORAGE_BUCKET</key>
+	<string>soogalbalad.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:448006986524:ios:4848b1139d31c76f6978d9</string>
+</dict>
+</plist>

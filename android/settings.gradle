@@ -1,0 +1,12 @@
+pluginManagement { includeBuild("../node_modules/@react-native/gradle-plugin") }
+plugins { id("com.facebook.react.settings") }
+extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autolinkLibrariesFromCommand() }
+rootProject.name = "SoogAlbalad"
+include ':app'
+includeBuild('../node_modules/@react-native/gradle-plugin')
+include ':react-native-splash-screen'   
+project(':react-native-splash-screen').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-splash-screen/android')
+include ':myfatoorah-reactnative'
+project(':myfatoorah-reactnative').projectDir = new File(rootProject.projectDir, '../node_modules/myfatoorah-reactnative/android')
+include ':@google_react-native-make-payment'
+project(':@google_react-native-make-payment').projectDir = new File(rootProject.projectDir, '../node_modules/@google/react-native-make-payment/android')
